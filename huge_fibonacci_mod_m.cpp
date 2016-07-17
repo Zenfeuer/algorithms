@@ -42,6 +42,7 @@ ul pisanoIndex(ul m)
 
 /**
  * Calculates the Fib(n) mod m through Pisano period.
+ * 
  * @return   Fib(n) mod m
  */
 ul fibonacciModM(ul n, ul m)
