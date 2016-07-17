@@ -11,7 +11,7 @@
 using namespace std;
 typedef unsigned long long ull;
 
-ull fibonacci(ull n)
+ull fibonacci(int n)
 {
 	ull prevElem1   = 0;	// Base case Fib(0)
 	ull prevElem2   = 1;	// Base case Fib(1)
@@ -31,7 +31,7 @@ ull fibonacci(ull n)
 
 int main(int argc, char **argv) 
 {
-	ull n;
+	int n;
 	cin >> n;
 	cout << fibonacci(n) << endl;
 

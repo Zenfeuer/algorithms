@@ -11,7 +11,7 @@
 using namespace std;
 typedef unsigned long long ull;
 
-ull fibonacciMod10(ull n)
+ull fibonacciMod10(int n)
 {
 	ull prevElem1   = 0;	// Base case Fib(0)
 	ull prevElem2   = 1;	// Base case Fib(1)
@@ -29,7 +29,7 @@ ull fibonacciMod10(ull n)
 	return currentElem;
 }
 
-int main() 
+int main(int argc, char **argv) 
 {
 	int n;
 	cin >> n;
