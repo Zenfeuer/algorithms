@@ -4,6 +4,8 @@
  * Input: 	First line: two integers n (number of items), and W (capacity of knapsack)
  * 			Next n lines: pair values (vi,wi), where vi is the value of the ith item
  * 			and wi its weight.
+ *
+ * Constraints: 1 <= n <= 10^3; 0 <= W <= 2*10^6; 0 <= vi <= 2*10^6; 0 < wi <= 2*10^6
  * 			
  * Output: 	Maximal value of fractions of items that fit into the knapsack with precision
  * 			of 10^-4.
@@ -95,7 +97,7 @@ int main(int argc, char const *argv[])
 
 	// Safe move: desc sort  of the items
 	sortItems(n);
-	
+
 	maxValue = knapsack(totalW, n);
 	cout << fixed << setprecision(4) << maxValue << endl;
 
