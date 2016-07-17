@@ -1,18 +1,35 @@
+/**
+ * Purpose: Resolves the fractional knapsack problem (greedy algorithm).
+ * 
+ * Input: 	First line: two integers n (number of items), and W (capacity of knapsack)
+ * 			Next n lines: pair values (vi,wi), where vi is the value of the ith item
+ * 			and wi its weight.
+ * 			
+ * Output: 	Maximal value of fractions of items that fit into the knapsack with precision
+ * 			of 10^-4.
+ */
+
 #include <iostream>
 #include <iomanip>
 #include <vector>
 
 using namespace std;
 
+// item to be stored in the knapsack
 struct item
 {
 	int value;
 	int weight;
-	double vw;
+	double vw;	// value/weight
 };
 
 vector<item> items;
 
+/**
+ * Sorts the items worst case O(n^2).
+ * This can be improved with a better sort method like Mergesort.
+ * @param n length of the vector
+ */
 void sortItems(int n)
 {
 	for(int i = 0; i < n; i++)
@@ -29,6 +46,14 @@ void sortItems(int n)
 	}
 }
 
+/**
+ * Resolves the fractional knapsack problem in iterative way.
+ * It assumes that the items are desc sorted.
+ * 
+ * @param  totalW knapsack weight
+ * @param  n      number of items
+ * @return        maximum value of fractions 
+ */
 double knapsack(double totalW, int n)
 {
 	double maxValue = 0.0;
@@ -54,8 +79,6 @@ double knapsack(double totalW, int n)
 	return maxValue;
 }
 
-
-
 int main(int argc, char const *argv[])
 {
 	int n;
@@ -70,7 +93,9 @@ int main(int argc, char const *argv[])
 		items.push_back(ii);
 	}
 
+	// Safe move: desc sort  of the items
 	sortItems(n);
+	
 	maxValue = knapsack(totalW, n);
 	cout << fixed << setprecision(4) << maxValue << endl;
 
