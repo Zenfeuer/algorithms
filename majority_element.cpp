@@ -1,5 +1,17 @@
+/**
+ * Purpose: Check the existence for a majority element in a given sequence.
+ *
+ * An element of a sequence of length n is called a majority element if it 
+ * appears in the sequence strictly more than n=2 times.
+ *
+ * Input:   First line: an integer n; 1 <= n <= 10^5
+ *          Second line: a sequence of n non-negative integers separated by
+ *          space. (a1,a2,...,an) 0 <= ai <= 10^9
+ * 
+ * Output:  1 if the sequence contains a majority element and 0 otherwise
+ */
+
 #include <iostream>
-#include <vector>
 #include <map>
 
 using namespace std;
